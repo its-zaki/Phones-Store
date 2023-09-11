@@ -58,6 +58,6 @@ const phones = [
 ];
 let main_div = document.querySelector("#main_div");
 
-for (i = 0; i < phones.length; i++) {
-  main_div.innerHTML += `<div class="container"><h1>${phones[i].brand}</h1> <h3><img class="images" src=${phones[i].img}> </br> Brand: ${phones[i].brand} </br> Model: ${phones[i].model} </br> Ram: ${phones[i].ram} </br> Rom: ${phones[i].rom} </br> Camera: ${phones[i].camera}</h3><button class="btn">ADD TO CART</button></div>`;
-}
+// for (i = 0; i < phones.length; i++) {
+//   main_div.innerHTML += `<div class="container"><h1>${phones[i].brand}</h1> <h3><img class="images" src=${phones[i].img}> </br> Brand: ${phones[i].brand} </br> Model: ${phones[i].model} </br> Ram: ${phones[i].ram} </br> Rom: ${phones[i].rom} </br> Camera: ${phones[i].camera}</h3><button class="btn">ADD TO CART</button></div>`;
+// }
