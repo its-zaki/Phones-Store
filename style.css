@@ -1,14 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root
 {
@@ -20,6 +17,7 @@
 body{
     width: 100%;
     height: 100vh;
+    background-color: var(--grey);
 
 }
 .header{
@@ -78,44 +76,90 @@ body{
     background-color: var(--white);
     color: var(--blue);
 }
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--white);
+}
+.company-logo>a>img{
+    width: 10vw;
+    height: 8vh;
+    margin: 10px;
+}
+.company-logo:hover{
+    opacity: 0.5;
+    border-bottom: 3px solid var(--blue);
+    cursor: pointer;
 
-/* .container{
-    background: linear-gradient(#fbb040, #f9ed32);
-    width: 25%;
-    height: 100%;
-    margin-left: 60px;
-    margin-top: 30px;
+}
+.banner>img{
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+}
+.heading_two{
+    color: rgb(70, 68, 68);
+    font-family: sans-serif;
+    margin: 20px;
+    
+}
+/* card section  */
+#main_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;justify-content: center;
+
+}
+.cart{
+    background-color: var(--blue);
+    border-radius: 20px ;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-} 
-#main_div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-}
-.images{
-    width: 100%;
+    margin: 20px;
+    
+}.cart>img{
+    width: 15vw;
+    height: 25vh;
     border-radius: 10px;
-    
+    margin-top: 20px;
     
 }
-.heading{
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: greenyellow;
-    text-shadow: 10px 10px 20px #000;
+.specs{
+    margin-top: 10px;
+    font-size: 1rem;
+    /* margin-left: 20px; */
 }
-.btn{
-    padding: 10px 20px;
-    background-color: #fbb040;
-    color: #FFFFFF;
+.specs>h3{
+    color: var(--grey);
+    
+}
+.specs>h3>span{
+    font-weight: 100;
+    font-family: "stylish";
+}
+.cart-btn{
+    padding:  10px 20px;
+    margin: 10px;
+    background-color: var(--white);
+    color: var(--blue);
     font-weight: 900;
-    margin: 20px 0px 10px 0px;
-    border-radius: 20px;
+    font-size: 1rem;
+    font-family: "stylish";
     border: none;
+    border-radius: 20px;
     cursor: pointer;
-} */
+}
+.cart-btn:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+
+
+
+
+
