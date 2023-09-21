@@ -6,7 +6,7 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price:"120000 PKR",
+    price: "120000 PKR",
   },
   {
     brand: "Xiomi",
@@ -33,7 +33,7 @@ const phones = [
     ram: "12gb",
     rom: "512gb",
     camera: "25 megapixel",
-    price:"70000 PKR",
+    price: "70000 PKR",
   },
   {
     brand: "Iphone",
@@ -42,7 +42,7 @@ const phones = [
     ram: "4gb",
     rom: "1024gb",
     camera: "30 megapixel",
-    price:"600000 PKR",
+    price: "600000 PKR",
   },
   {
     brand: "Oppo",
@@ -51,25 +51,25 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price:"60000 PKR",
+    price: "60000 PKR",
   },
   {
     brand: "Vivo",
     img: "./assest/img/vivo.jpg",
     model: "y20",
     ram: "4gb",
-    rom: '64gb',
+    rom: "64gb",
     camera: "8 megapixel",
-    price:"30000 PKR ",
+    price: "30000 PKR ",
   },
   {
     brand: "Sony",
     img: "./assest/img/sony.jpg",
     model: "Xperia",
     ram: "4gb",
-    rom: '128gb',
+    rom: "128gb",
     camera: "12 megapixel",
-    price:"45000 PKR ",
+    price: "45000 PKR ",
   },
 ];
 let main_div = document.querySelector("#main_div");
@@ -90,25 +90,42 @@ for (i = 0; i < phones.length; i++) {
 </div>`;
 }
 
-
-
-const ArrayOfCart = []
+const ArrayOfCart = [];
 function AddToCart(index) {
   // ArrayOfCart.push(phones[index])
   // console.log(ArrayOfCart);
-  
-    if (ArrayOfCart.includes(phones[index]) === true) {
-        console.log('Item Is Existed');
-    }
-    else {
-        ArrayOfCart.push(phones[index]);
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your Item Is Successfully Added',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    }
-    console.log('cartArr:', ArrayOfCart);
+
+  if (ArrayOfCart.includes(phones[index]) === true) {
+    // console.log('Item Is Existed');
+    phones[index].quantity += 1;
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your Item Quantity Is Increased ",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    phones[index].quantity = 1;
+    ArrayOfCart.push(phones[index]);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your Item Is Successfully Added",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    console.log("cartArr:", ArrayOfCart);
+  }
 }
+
+const Items = JSON.stringify(phones)
+localStorage.setItem('Phones Items' , Items )
+
+
+
+
+
+function GoToCart() {
+  window.location = "cart.html";
+};
