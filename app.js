@@ -6,7 +6,7 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price: "120000 PKR",
+    price: 120000 ,
   },
   {
     brand: "Xiomi",
@@ -15,7 +15,7 @@ const phones = [
     ram: "4gb",
     rom: "64gb",
     camera: "10 megapixel",
-    price: "50000 PKR",
+    price: 50000,
   },
   {
     brand: "Infinix",
@@ -24,7 +24,7 @@ const phones = [
     ram: "2gb",
     rom: "16gb",
     camera: "5 megapixel",
-    price: "15000 PKR",
+    price: 15000 ,
   },
   {
     brand: "Tecno",
@@ -33,7 +33,7 @@ const phones = [
     ram: "12gb",
     rom: "512gb",
     camera: "25 megapixel",
-    price: "70000 PKR",
+    price: 70000 ,
   },
   {
     brand: "Iphone",
@@ -42,7 +42,7 @@ const phones = [
     ram: "4gb",
     rom: "1024gb",
     camera: "30 megapixel",
-    price: "600000 PKR",
+    price: 600000,
   },
   {
     brand: "Oppo",
@@ -51,7 +51,7 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price: "60000 PKR",
+    price: 6000,
   },
   {
     brand: "Vivo",
@@ -60,7 +60,7 @@ const phones = [
     ram: "4gb",
     rom: "64gb",
     camera: "8 megapixel",
-    price: "30000 PKR ",
+    price: 30000,
   },
   {
     brand: "Sony",
@@ -69,7 +69,7 @@ const phones = [
     ram: "4gb",
     rom: "128gb",
     camera: "12 megapixel",
-    price: "45000 PKR ",
+    price: 45000,
   },
 ];
 let main_div = document.querySelector("#main_div");
@@ -97,7 +97,14 @@ function AddToCart(index) {
 
   if (ArrayOfCart.includes(phones[index]) === true) {
     // console.log('Item Is Existed');
-    phones[index].quantity += 1;
+    // phones[index].quantity += 1;
+    for (let i = 0; i <ArrayOfCart.length; i++) {
+      if(ArrayOfCart[i]=== phones[index]){
+        phones[index].quantity +=1;
+
+      }
+      
+    }
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -119,13 +126,15 @@ function AddToCart(index) {
   }
 }
 
-const Items = JSON.stringify(phones)
-localStorage.setItem('Phones Items' , Items )
+
+// let key = prompt("enter key")
+// let value = prompt("enter value")
 
 
 
-
-
+// localStorage.clear()
 function GoToCart() {
+  const items = JSON.stringify(ArrayOfCart)
+  localStorage.setItem('cartarr', items )
   window.location = "cart.html";
-};
+}

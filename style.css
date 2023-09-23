@@ -58,6 +58,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
+    border: 1px solid transparent;
 }
 .nav-btn2{
     padding: 10px 30px;
@@ -86,6 +87,9 @@ body{
     height: 8vh;
     margin: 10px;
 }
+.company-logo{
+    border: 3px solid transparent;
+}
 .company-logo:hover{
     opacity: 0.5;
     border-bottom: 3px solid var(--blue);
@@ -110,12 +114,12 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
+    
 }
 .cart{
     background-color: var(--blue);
     border-radius: 20px ;
-    width: 20vw;
+    width: 24vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +127,7 @@ body{
     margin: 20px;
     
 }.cart>img{
-    width: 15vw;
+    width: 17vw;
     height: 25vh;
     border-radius: 10px;
     margin-top: 20px;
@@ -132,7 +136,7 @@ body{
 .specs{
     margin-top: 10px;
     font-size: 1rem;
-    /* margin-left: 20px; */
+    padding-left: 20px;
 }
 .specs>h3{
     color: var(--grey);
@@ -153,18 +157,63 @@ body{
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 .cart-btn:hover{
     background-color: var(--blue);
     color: var(--white);
     border: 2px solid var(--white);
 }
+.cart-btn2{
+    padding:  10px 20px;
+    margin: 10px;
+    background-color: var(-);
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 1rem;
+    font-family: "stylish";
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cart-btn2:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.cart-btn3{
+    padding:  0px 10px;
+    margin: 10px;
+    background-color:var(--white);
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cart-btn3:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
 .check-btn{
     padding: 10px 20px;
-    background-color: aqua;
+    background-color: var(--blue);
+    border: none;
+    color: #ffffff;
     font-size: 1.5rem;
     border-radius: 10px;    
     cursor: pointer;
+    border: 2px solid transparent;
+}
+.check-btn:hover{
+    background-color: var(--white);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+
 }
 .btn-div{
     display: flex;
@@ -177,8 +226,14 @@ body{
     font-weight: 600;
     color: var(--blue);
 }
-
-
+#cart_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cart_div{
+    color: #ffffff;
+}
 
 
 
