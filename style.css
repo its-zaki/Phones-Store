@@ -234,6 +234,16 @@ body{
 #cart_div{
     color: #ffffff;
 }
-
-
+#head{
+    text-align: center;
+}
+.sub-head{
+    color:  var(--blue);
+    font-size: xx-large;
+    font-family: "stylish";
+}
+.total{
+    font-size: 2rem;
+    font-family: "stylish";
+}
 
