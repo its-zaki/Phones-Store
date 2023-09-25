@@ -1,8 +1,17 @@
 const cartdiv = document.querySelector("#cart_div");
-const head = document.querySelector("#head")
+const head = document.querySelector("#head");
+const head_two = document.querySelector("#head-two");
 const data = localStorage.getItem("cartarr");
 const obj_data = JSON.parse(data);
 render();
+if (obj_data == "") {
+  head_two.innerHTML = "Nothing In Cart";
+  head.innerHTML = "";
+} else {
+  head.innerHTML = `<span class="sub-head">Total Amount:</span> <span class=total>${sumofarr(
+    obj_data
+  )}</span>`;
+}
 
 function render() {
   for (i = 0; i < obj_data.length; i++) {
@@ -55,7 +64,5 @@ function sumofarr(obj_data) {
     sum += arr[i].price * arr[i].quantity;
   }
   return sum;
-  
 }
-head.innerHTML = `<span class="sub-head">Total Amount:</span> <span class=total>${sumofarr(obj_data)}</span>`
 console.log(sumofarr(obj_data));
