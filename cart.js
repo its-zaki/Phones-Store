@@ -6,22 +6,22 @@ const obj_data = JSON.parse(data);
 render();
 if (obj_data == "") {
   head_two.innerHTML = "Nothing In Cart ";
-    head.innerHTML = "";
+} else {
+  head_two.innerHTML = " ";
 }
 
 function render() {
   let total = 0;
+  head.innerHTML = "";
+
   for (i = 0; i < obj_data.length; i++) {
-      total += obj_data[i].price * obj_data[i].quantity
-  
+    total += obj_data[i].price * obj_data[i].quantity;
+
     cartdiv.innerHTML += `<div class="cart">
         <img src="${obj_data[i].img}" alt="mobile image">
         <div class="specs">
         <h3>Brand : <span>${obj_data[i].brand}</span></h3>
         <h3>Model : <span>${obj_data[i].model}</span></h3>
-        <h3>Ram : <span>${obj_data[i].ram}</span></h3>
-        <h3>Rom : <span>${obj_data[i].rom}</span></h3>
-        <h3>Camera : <span>${obj_data[i].camera}</span></h3>
         <h3>Price : <span>${obj_data[i].price}</span></h3>
         <h3>Quantity : <span>${obj_data[i].quantity}</span></h3>
         <h3>Total Price : <span>${
@@ -43,12 +43,8 @@ function render() {
     // sumofarr(
     //   obj_data
     // )
-  //   if(){
+
     head.innerHTML = `<span class="sub-head">Total Amount:</span> <span class=total>${total}</span>`;
-  // }
-  // else{
-  // head.innerHTML = "";
-  // }
   }
 }
 function Increased(index) {
@@ -73,6 +69,6 @@ function Delete(index) {
 function gotohome() {
   window.location = "index.html";
 }
-window.onbeforeunload = function(){
-  localStorage.setItem("cartarr", JSON.stringify(obj_data))
-}
+window.onbeforeunload = function () {
+  localStorage.setItem("cartarr", JSON.stringify(obj_data));
+};

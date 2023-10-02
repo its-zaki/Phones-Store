@@ -6,7 +6,7 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price: 120000 ,
+    price: 120000,
   },
   {
     brand: "Xiomi",
@@ -24,7 +24,7 @@ const phones = [
     ram: "2gb",
     rom: "16gb",
     camera: "5 megapixel",
-    price: 15000 ,
+    price: 15000,
   },
   {
     brand: "Tecno",
@@ -33,7 +33,7 @@ const phones = [
     ram: "12gb",
     rom: "512gb",
     camera: "25 megapixel",
-    price: 70000 ,
+    price: 70000,
   },
   {
     brand: "Iphone",
@@ -51,7 +51,7 @@ const phones = [
     ram: "8gb",
     rom: "256gb",
     camera: "20 megapixel",
-    price: 6000,
+    price: 60000,
   },
   {
     brand: "Vivo",
@@ -90,7 +90,9 @@ for (i = 0; i < phones.length; i++) {
 </div>`;
 }
 
-const ArrayOfCart = [];
+const receive_data = localStorage.getItem("cartarr");
+const json_data = JSON.parse(receive_data);
+const ArrayOfCart = [...json_data];
 function AddToCart(index) {
   // ArrayOfCart.push(phones[index])
   // console.log(ArrayOfCart);
@@ -98,12 +100,10 @@ function AddToCart(index) {
   if (ArrayOfCart.includes(phones[index]) === true) {
     // console.log('Item Is Existed');
     // phones[index].quantity += 1;
-    for (let i = 0; i <ArrayOfCart.length; i++) {
-      if(ArrayOfCart[i]=== phones[index]){
-        phones[index].quantity +=1;
-
+    for (let i = 0; i < ArrayOfCart.length; i++) {
+      if (ArrayOfCart[i] === phones[index]) {
+        phones[index].quantity += 1;
       }
-      
     }
     Swal.fire({
       position: "top-end",
@@ -126,15 +126,12 @@ function AddToCart(index) {
   }
 }
 
-
 // let key = prompt("enter key")
 // let value = prompt("enter value")
 
-
-
 // localStorage.clear()
 function GoToCart() {
-  const items = JSON.stringify(ArrayOfCart)
-  localStorage.setItem('cartarr', items )
+  const items = JSON.stringify(ArrayOfCart);
+  localStorage.setItem("cartarr", items);
   window.location = "cart.html";
 }
