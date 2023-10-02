@@ -5,13 +5,15 @@ const data = localStorage.getItem("cartarr");
 const obj_data = JSON.parse(data);
 render();
 if (obj_data == "") {
-  head_two.innerHTML = "Nothing In Cart";
-  head.innerHTML = "";
-} else {
+  head_two.innerHTML = "Nothing In Cart ";
+    head.innerHTML = "";
 }
 
 function render() {
+  let total = 0;
   for (i = 0; i < obj_data.length; i++) {
+      total += obj_data[i].price * obj_data[i].quantity
+  
     cartdiv.innerHTML += `<div class="cart">
         <img src="${obj_data[i].img}" alt="mobile image">
         <div class="specs">
@@ -26,21 +28,27 @@ function render() {
           obj_data[i].price * obj_data[i].quantity
         }</span></h3>
         <button class="cart-btn3" onclick="Increased(${i})"><h3>+</h3></button>${
-          obj_data[i].quantity
+      obj_data[i].quantity
     }<button class="cart-btn3"  onclick="Decreased(${i})"><h3>-</h3></button>
     <button class="cart-btn2" onclick="Delete(${i})">Delete</button>
       </div>`;
-    function sumofarr(obj_data) {
-      const arr = obj_data;
-      let sum = 0;
-      for (let i = 0; i < arr.length; i += 1) {
-        sum += arr[i].price * arr[i].quantity;
-      }
-      return sum;
-    }
-    head.innerHTML = `<span class="sub-head">Total Amount:</span> <span class=total>${sumofarr(
-      obj_data
-    )}</span>`;
+    // function sumofarr(obj_data) {
+    //   const arr = obj_data;
+    //   let sum = 0;
+    //   for (let i = 0; i < arr.length; i += 1) {
+    //     sum += arr[i].price * arr[i].quantity;
+    //   }
+    //   return sum;
+    // }
+    // sumofarr(
+    //   obj_data
+    // )
+  //   if(){
+    head.innerHTML = `<span class="sub-head">Total Amount:</span> <span class=total>${total}</span>`;
+  // }
+  // else{
+  // head.innerHTML = "";
+  // }
   }
 }
 function Increased(index) {
@@ -65,4 +73,6 @@ function Delete(index) {
 function gotohome() {
   window.location = "index.html";
 }
-console.log(sumofarr(obj_data));
+window.onbeforeunload = function(){
+  localStorage.setItem("cartarr", JSON.stringify(obj_data))
+}
