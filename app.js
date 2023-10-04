@@ -5,7 +5,7 @@ const phones = [
     model: "S20",
     ram: "8gb",
     rom: "256gb",
-    camera: "20 megapixel",
+    camera: "20mp",
     price: 120000,
   },
   {
@@ -14,7 +14,7 @@ const phones = [
     model: "note10",
     ram: "4gb",
     rom: "64gb",
-    camera: "10 megapixel",
+    camera: "10mp",
     price: 50000,
   },
   {
@@ -23,7 +23,7 @@ const phones = [
     model: "z10",
     ram: "2gb",
     rom: "16gb",
-    camera: "5 megapixel",
+    camera: "5mp",
     price: 15000,
   },
   {
@@ -32,7 +32,7 @@ const phones = [
     model: "spark10",
     ram: "12gb",
     rom: "512gb",
-    camera: "25 megapixel",
+    camera: "25mp",
     price: 70000,
   },
   {
@@ -41,7 +41,7 @@ const phones = [
     model: "14",
     ram: "4gb",
     rom: "1024gb",
-    camera: "30 megapixel",
+    camera: "30mp",
     price: 600000,
   },
   {
@@ -50,7 +50,7 @@ const phones = [
     model: "F11",
     ram: "8gb",
     rom: "256gb",
-    camera: "20 megapixel",
+    camera: "20mp",
     price: 60000,
   },
   {
@@ -59,7 +59,7 @@ const phones = [
     model: "y20",
     ram: "4gb",
     rom: "64gb",
-    camera: "8 megapixel",
+    camera: "8mp",
     price: 30000,
   },
   {
@@ -68,7 +68,7 @@ const phones = [
     model: "Xperia",
     ram: "4gb",
     rom: "128gb",
-    camera: "12 megapixel",
+    camera: "12mp",
     price: 45000,
   },
 ];
@@ -86,7 +86,7 @@ for (i = 0; i < phones.length; i++) {
   <h3>Price : <span>${phones[i].price}</span></h3>
 </div>
 
-  <button class="cart-btn" onclick="AddToCart(${i})">Add To Cart</button>
+  <button class="cart-btn " onclick="AddToCart(${i})">Add To Cart</button>
 </div>`;
 }
 

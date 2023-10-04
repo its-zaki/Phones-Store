@@ -55,6 +55,7 @@ body {
   cursor: pointer;
   margin-right: 10px;
   border: 1px solid transparent;
+  transition: 0.3s;
 }
 .nav-btn2 {
   padding: 10px 30px;
@@ -63,6 +64,7 @@ body {
   border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .nav-btn:hover {
   background-color: var(--blue);
@@ -109,6 +111,9 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* cart section  */
+
 #cart_div {
   display: flex;
   flex-wrap: wrap;
@@ -119,24 +124,26 @@ body {
 .cart {
   background-color: var(--blue);
   border-radius: 20px;
-  width: 24vw;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 20px;
+  box-shadow: 0px 0px 10px #000;
 }
 .cart > img {
-  width: 17vw;
-  height: 25vh;
+  width: 14vw;
+  height: 20vh;
   border-radius: 10px;
   margin-top: 20px;
 }
 .specs {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding-left: 20px;
+
 }
 .specs > h3 {
   color: var(--grey);
@@ -145,26 +152,40 @@ body {
   font-weight: 100;
   font-family: "stylish";
 }
+
+
+/* cart btn */
 .cart-btn {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: var(--white);
+  width: 70%;
   color: var(--blue);
-  font-weight: 900;
-  font-size: 1rem;
+  
+  margin: 8px 0px;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  padding: 5px 16px;
+  display: inline-block;
   font-family: "stylish";
-  border: none;
-  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
   cursor: pointer;
-  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 0 var(--blue);
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
 }
+
+.cart-btn:hover {
+  box-shadow: inset 0 100px 0 0 var(--blue);
+}
+/* cart btn end  */
 .cart-btn:hover {
   background-color: var(--blue);
   color: var(--white);
   border: 2px solid var(--white);
 }
 .cart-btn2 {
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 10px;
   background-color: var(-);
   color: var(--blue);
@@ -181,8 +202,8 @@ body {
   color: var(--white);
   border: 2px solid var(--white);
 }
-.cart-btn3 {
-  padding: 0px 10px;
+.cart-btn3 { /*Incerese and deceresed buttton */
+  padding: 0px 5px;
   margin: 10px;
   background-color: var(--white);
   color: var(--blue);

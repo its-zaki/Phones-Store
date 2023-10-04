@@ -29,8 +29,7 @@ function render() {
         }</span></h3>
         <button class="cart-btn3" onclick="Increased(${i})"><h3>+</h3></button>${
       obj_data[i].quantity
-    }<button class="cart-btn3"  onclick="Decreased(${i})"><h3>-</h3></button>
-    <button class="cart-btn2" onclick="Delete(${i})">Delete</button>
+    }<button class="cart-btn3"  onclick="Decreased(${i})"><h3>-</h3></button> <button class="cart-btn2" onclick="Delete(${i})">Delete</button>
       </div>`;
     // function sumofarr(obj_data) {
     //   const arr = obj_data;
