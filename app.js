@@ -92,7 +92,15 @@ for (i = 0; i < phones.length; i++) {
 
 const receive_data = localStorage.getItem("cartarr");
 const json_data = JSON.parse(receive_data);
-const ArrayOfCart = [...json_data];
+
+let ArrayOfCart;
+if(Array.isArray(json_data)){
+  ArrayOfCart = [...json_data];
+}
+else{
+   ArrayOfCart = [];
+
+}
 function AddToCart(index) {
   // ArrayOfCart.push(phones[index])
   // console.log(ArrayOfCart);
