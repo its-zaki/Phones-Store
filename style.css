@@ -326,3 +326,149 @@ body {
   transform: translateY(2px);
 }
 /* Go To Button End  */
+
+/* register section start  */
+.register{
+  /* border: 1px solid  #ffffff55  ; */
+  border: 1px solid rgb(192, 190, 190) ;
+  width: 500px;
+  margin: 60px auto;
+  
+}
+.register-head{
+  text-align: center;
+  margin-top: 20px;
+  color: var(--blue);
+  font-family: "stylish";
+  font-size: 1.7rem;
+}
+.register-input {
+  display: block;
+  width: 100%;
+  margin-left: 10px;
+  border: unset !important;
+  background:none;
+  outline: none;
+}
+.register-input::placeholder{
+  color: gray;
+}
+
+.input-hdng{
+  margin-left: 10px;
+  color: rgb(44, 44, 44);
+  font-size: small;
+}
+.register-input-div{
+  border: 1px solid grey;
+  /* border-left: 5px solid grey; */
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 25px auto;
+  padding: 5px;
+
+  /* background-color:#979494; */
+
+
+}
+.input-submit{
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  background-color:var(--blue);
+  cursor: pointer;
+  
+}
+.submit-btn{
+  color: #ffffff;
+  letter-spacing: 3px;
+  background-color: var(--blue);
+  border:none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#head-three{
+  text-align: center;
+  color: green;
+  font-family: "stylish";
+  font-size: 1.1rem;
+}
+.forgot-pass-a{
+  text-decoration: none;
+  margin-left: 55px;
+  font-size: 12px;
+}
+.forgot-pass-a:hover{
+  color: rgb(69, 155, 212)
+}
+.input-submit-register{
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  background-color:#e4574a;
+  cursor: pointer;
+  
+}
+.input-submit-register-fb{
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  background-color:#537fdd;
+  cursor: pointer;
+
+}
+.submit-btn-register{
+  background-color: #e4574a;
+  color: #ffffff;
+  border:none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.submit-btn-fb{
+  background-color: #537fdd;
+  color: #ffffff;
+  border:none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.form-p{
+  text-align: center;
+}
+
+.bg-form-icon{
+  background-color: #cf463a;
+  
+}
+.bg-form-icon-fb{
+  background-color: #3b5998;
+  
+}
+.form-end-para{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+}
+.red-text{
+  color: red;
+  cursor: pointer;
+}
+#register-body{
+  background-color: #ffffff;
+}
+
+/* register section end  */

@@ -94,12 +94,10 @@ const receive_data = localStorage.getItem("cartarr");
 const json_data = JSON.parse(receive_data);
 
 let ArrayOfCart;
-if(Array.isArray(json_data)){
+if (Array.isArray(json_data)) {
   ArrayOfCart = [...json_data];
-}
-else{
-   ArrayOfCart = [];
-
+} else {
+  ArrayOfCart = [];
 }
 function AddToCart(index) {
   // ArrayOfCart.push(phones[index])
@@ -142,4 +140,10 @@ function GoToCart() {
   const items = JSON.stringify(ArrayOfCart);
   localStorage.setItem("cartarr", items);
   window.location = "cart.html";
+}
+function register() {
+  window.location = "register.html";
+}
+function login() {
+  window.location = "login.html";
 }
