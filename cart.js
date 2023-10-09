@@ -71,3 +71,9 @@ function gotohome() {
 window.onbeforeunload = function () {
   localStorage.setItem("cartarr", JSON.stringify(obj_data));
 };
+function register() {
+  window.location = "register.html";
+}
+function login() {
+  window.location = "login.html";
+}

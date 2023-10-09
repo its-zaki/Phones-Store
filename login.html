@@ -11,16 +11,14 @@
 <body id="register-body">
     <header class="header">
         <nav class="navbar">
-            <h1 class="logo"><i class="ri-computer-line"></i>TheTechSpot</h1><input class="search" type="text"
+            <a href="index.html"><h1 class="logo"><i class="ri-computer-line"></i>TheTechSpot</h1></a><input class="search" type="text"
             placeholder="Search...">
             <div><button  class="nav-btn">log in</button><button onclick="register()" class="nav-btn2">Register</button></div>
         </nav>
     </header>
     <!-- register form start  -->
     <div class="register ">
-        <!-- <div class=""> -->
             <h2 class="register-head">Login to your Account</h2>
-        <!-- </div> -->
         <div class="register-input-div ">
             <span class="input-hdng">Email</span><br>
             <input id="email-input" class="register-input" type="emial" placeholder="Enter Your Emial">
@@ -29,14 +27,13 @@
             <span class="input-hdng">Password</span><br>
             <input id="password-input" class="register-input" type="emial" placeholder="Enter Your Password">
         </div>
-        <div class="input-submit">
-            <button id="submit" onclick="identity()"  class="submit-btn">Register</button>
+        <div class="input-submit" >
+            <button id="submit"  onclick="logedIn()" class="submit-btn">Login</button>
         </div>
 
         
     </div>
     <!-- register form end  -->
-    <div class="btn-div"><button class="button-29" onclick="gotohome()"> Go To Home</button></div>
 
  <script src="login.js"></script>
 </body>
